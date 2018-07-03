@@ -11,4 +11,5 @@ def my_select(collection)
   else
     nil
   end
+  selected_elements
 end
