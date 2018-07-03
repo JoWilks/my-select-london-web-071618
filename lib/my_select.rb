@@ -1,15 +1,15 @@
 def my_select(collection)
   if block_given?
-    selected_elements = []
+    selected = []
     i = 0
     while i<collection.length
-      if yield collection[i] === true
-        selected_elements.push("test")
+      if (yield collection[i]) === true
+        selected << collection[i]
       end 
       i += 1
     end
   else
     nil
   end
-  selected_elements
+  selected
 end
